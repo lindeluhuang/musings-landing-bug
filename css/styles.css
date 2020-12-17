@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap');
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg);}
+  }
+  
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: #373737;
+    background-color: #D0D5E8;
+    transition: background-color 0.5s;
+
+    width: 100%;
+    margin-top: 240px;
+}
+
+
+a {
+    color: #5E6C9B;
+    text-decoration: none;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    background-color: #D0D5E8;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 48px;
+    height: 100px;
+    transition: background-color 1s;
+    transition: height 1s;
+}
+
+header h1, header nav {
+    flex: 1;
+}
+
+header nav {
+    text-align: right;
+}
+
+header a {
+    margin-left: 16px;
+    font-size: 0.8em;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: 110px;
+        padding: 0;
+    }
+
+    header nav {
+        text-align: center;
+    }
+
+    header a {
+        margin: 0 10px;
+        font-size: 0.8em;
+    }
+}
+
+header a:hover {
+    color:  #373737;
+}
+
+header.scrolled {
+    background-color: #ffffff;
+    height: 65px;
+}
+
+@media (max-width: 800px) {
+    header.scrolled {
+        height: 110px;
+    }
+}
+
+header img {
+    width: 160px;
+    height: auto;
+    transition: width 0.5s;
+    transform: translate(0, 3px);
+}
+
+
+/* ---------- Each Section ---------- */
+section {
+    margin: 160px auto;
+    max-width: 1120px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 0 30px;
+    }
+
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+section:nth-child(odd) div {
+    padding-right: 60px;
+}
+
+section:nth-child(even) div {
+    padding-left: 60px;
+}
+
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+    }
+
+    section:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    section:nth-child(odd) div {
+        padding-right: 0px;
+    }
+    
+    section:nth-child(even) div {
+        padding-left: 0px;
+    }
+
+}
+
+section div {
+    max-width: 660px;
+    position: relative;
+}
+
+section img {
+    width: calc(50vw - 60px);
+    max-width: 500px;
+    height: auto;
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    section img {
+        width: 80vw;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+section.s2, section.section-cta {
+    color: #ffffff;
+}
+
+/* ---------- CTA: Call to Action ---------- */
+
+.section-cta {
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.section-cta img {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 40px;
+}
+
+.section-cta h2 {
+    margin-bottom: 10px;
+}
+
+.section-cta p {
+    margin-top: 0px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+@media (max-width: 800px) {
+    .cta-buttons {
+        flex-direction: column;
+
+    }
+}
+
+.create-account {
+    margin-right: 10px;
+}
+
+a.button {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.9em;
+    display: inline-block;
+    color: #373737;
+    background-color: #BAC4E4;
+    border-radius: 15px;
+    padding: 0.5em 1.5em;
+    transition: background-color 0.3s;
+    box-shadow: 3px 5px #5E6C9B;
+    transition: box-shadow 0.3s;
+}
+
+a.button:hover {
+    background-color: #5E6C9B;
+    color: white;
+    box-shadow: none;
+}
+
+.create-account {
+    margin-right: 10px;
+}
+
+.log-in {
+    margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+    a.button {
+        margin: 20px 0 0 0;
+    }
+}
+
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    width: 100%;
+    background-color: #d3d4d8;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 30px 20px;
+
+}

@@ -1,0 +1,1 @@
+window.location.href = 'https://my-musings-app.bubbleapps.io/version-live/thoughts';
